@@ -1,0 +1,27 @@
+
+int k =  80;
+for(int i = 0; i < 5; i++){
+	k = k - 12;
+}
+
+the loop runs 5 times and subtracts 12 from k each time, k starts out as 80, so 80 - 5 * 12 = 20
+
+Answer: C
+
+2. 
+
+char star = '*';
+
+//first loop runs 5 times (one for each row)
+for (int i = 0; i < 5; i++){
+
+  //second loop runs once for every star in each row (1,2,3,4,5)
+	for (int j = 0; j < i+1; j ++) {
+
+		//prints stars on the same row
+		System.out.print(star);
+	}
+	
+	//prints a newline
+	System.out.println();
+}
