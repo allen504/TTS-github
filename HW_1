@@ -1,0 +1,113 @@
+import java.util.*;
+
+public class HW_1 {
+
+	
+	public static void main(String[] args) {
+		
+        //HW Part 1
+        
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please enter your score:");
+		float grade1 = in.nextFloat();
+		char letterGrade = ' ';
+		
+		if (grade1 >= 90 && grade1 < 101) {
+			letterGrade = 'A';
+		}
+		else if (grade1 >= 80 && grade1 < 90) {
+			letterGrade = 'B';
+		}
+		else if (grade1 >= 70 && grade1 < 80) {
+			letterGrade = 'C';
+		}
+		else if (grade1 >= 60 && grade1 < 70) {
+			letterGrade = 'D';
+		}
+		else if (grade1 >= 0 && grade1 < 60) {
+			letterGrade = 'F';
+		}
+		else {
+			System.out.println("Not a valid score");
+		}
+		System.out.println("Grade: " + grade1 + " " + letterGrade);
+		
+		
+		
+		//HW Part 2
+		
+		//Scanner in = new Scanner(System.in);
+		System.out.println("Please enter your score (0-100):");
+		//can't switch with float
+		int grade = in.nextInt();
+		letterGrade = ' ';
+		switch (grade/10) { 
+		case 10:
+		case 9:
+            letterGrade = 'A'; 
+            break; 
+        case 8:
+        	letterGrade = 'B'; 
+            break; 
+        case 7:
+        	letterGrade = 'C'; 
+            break; 
+        case 6:
+        	letterGrade = 'D';  
+            break; 
+        default: 
+        	letterGrade = 'F';  
+            break; 
+        } 
+		System.out.println("Grade: " + grade + " " + letterGrade);
+		
+		
+		
+		//HW Part 3
+		String drive = "You can drive!";
+		String vote = "You can vote!";
+		String drink = "You can drink!";
+		String run = "You can run for president!";
+		System.out.println("Please enter your birth year(i.e. 1989):");
+		int year = in.nextInt();
+		System.out.println("Have you had a birthday yet this year?(y/n):");
+		String bday = in.next();
+		int age = 0;
+		if (bday.equals("y")) {
+			age = 2020 - year;
+		}
+		else {
+			age = 2019 - year;
+		}
+		
+		if(age >= 17) {
+			
+			System.out.println(drive);
+			
+			if (age >= 18) {
+				
+				System.out.println(vote);
+				
+				if (age >= 21) {
+					
+					System.out.println(drink);
+					
+					if (age >= 35) {
+						
+						System.out.println(run);
+						
+						System.out.println("Congrats, you can do everything! :)");
+					
+					}
+				
+				}
+			
+			}
+		
+		}
+		else {
+			System.out.println("Sorry, you can't do anything :(");
+		}
+		
+	}
+}
